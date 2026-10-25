@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+caddy-data/
+caddy-config/
+releases/
+backups/
+*.log
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db

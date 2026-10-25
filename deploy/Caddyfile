@@ -1,0 +1,26 @@
+{
+    admin off
+}
+
+(personal_site) {
+    root * /srv
+    encode zstd gzip
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy strict-origin-when-cross-origin
+        X-Frame-Options DENY
+    }
+    @assets path /assets/*
+    header @assets Cache-Control "public, max-age=3600"
+    @html path / /index.html
+    header @html Cache-Control "no-cache"
+    file_server
+}
+
+http://169.58.224.66 {
+    import personal_site
+}
+
+{$SITE_DOMAIN} {
+    import personal_site
+}

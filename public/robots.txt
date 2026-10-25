@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shredeliline.duckdns.org/sitemap.xml
